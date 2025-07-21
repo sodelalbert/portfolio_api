@@ -61,6 +61,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     needs: python-code-quality
+    name: API Tests
 
     steps:
       - name: Checkout code

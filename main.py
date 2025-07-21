@@ -7,7 +7,6 @@ from starlette import status
 
 from config import settings
 
-
 app = FastAPI(
     description="FastAPI Project with SQLModel",
     title="Portfolio API",
