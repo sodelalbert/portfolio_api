@@ -5,8 +5,12 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlmodel import Field, Session, SQLModel, create_engine, select
 from starlette import status
 
+from config import settings
+
+
 app = FastAPI(
-    description="FastAPI Project with SQLModel - Users API",
+    description="FastAPI Project with SQLModel",
+    title="Portfolio API",
 )
 
 # --------------------------------------------------------------------------------
@@ -34,8 +38,8 @@ class User(SQLModel, table=True):
 # DB Setup
 # --------------------------------------------------------------------------------
 
-DATABASE_URL = "sqlite:///./users.db"
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+# DATABASE_URL = "sqlite:///./users.db"
+engine = create_engine(settings.DATABASE_URL, connect_args={"check_same_thread": False})
 SQLModel.metadata.create_all(engine)  # Create tables in the database
 
 
