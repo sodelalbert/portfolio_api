@@ -44,9 +44,6 @@ dmypy.json
 # Pipenv
 Pipfile.lock
 
-# UV 
-uv.lock
-
 # Build
 build/
 dist/
