@@ -44,8 +44,8 @@ dmypy.json
 # Pipenv
 Pipfile.lock
 
-# Poetry
-poetry.lock
+# UV 
+uv.lock
 
 # Build
 build/
